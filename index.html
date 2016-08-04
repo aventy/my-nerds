@@ -2,49 +2,56 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Nerds! - Главная</title>
-	<link rel="stylesheet" type="text/css" href="./css/normalize.css">
-	<link rel="stylesheet" type="text/css" href="./css/style.css">
+	<title>Nёrds! - Главная</title>
+	<link rel="stylesheet" href="./css/normalize.css">
+	<link rel="stylesheet" href="./css/style.css">
+	<link rel="stylesheet" href='https://fonts.googleapis.com/css?family=Roboto:500,300&subset=latin,cyrillic' >
+
 </head>
 <body>
-	<section class="gray-bg">
 		<header class="centered">
 			<a class="logo" href="./index.html"><img src="./img/logo.png" /></a>
 			<nav class="main-nav">
-				<a href="#">Студия</a>
-				<a href="#">Клиенты</a>
-				<a href="./store.html">Магазин</a>
-				<a href="#">Контакты</a>
-				<a href="#">Корзина</a>
+				<a href="#">студия</a>
+				<a href="#">клиенты</a>
+				<a href="./store.html">магазин</a>
+				<a href="#">контакты</a>
+				<a href="#"><img class="icon-cart" src="./img/icon-cart.png">корзина</a>
 			</nav>
 		</header>
-		<div class="slider centered">
+		<section class="slider centered">
 			<div class="switch">
-				<input type="radio" />
-				<input type="radio" />
-				<input type="radio" /``>
-				<label for=""></label>
-				<label for=""></label>
-				<label for=""></label>	
+				<input type="radio" id="slide-1" name="toggle" checked />
+				<input type="radio" id="slide-2" name="toggle" />
+				<input type="radio" id="slide-3" name="toggle" />
+				<label for="slide-1"></label>
+				<label for="slide-2"></label>
+				<label for="slide-3"></label>	
 			</div>
 			<a href="#" class="learn-more">узнать больше</a>
 			<div class="slide-1">
-				<h1>Долго, дорого, скрупулёзно.</h1>
-				<p>Математически выверенный дизайн для вашего сайта или мобильного приложения.</p>
+				<div class="text-wrapper">
+					<h1>Долго, дорого, скрупулёзно.</h1>
+					<p>Математически выверенный дизайн для вашего сайта или мобильного приложения.</p>
+				</div>
 				<img src="./img/cross-devices.png" />
 			</div>
 			<div class="slide-2">
-				<h1>Любите ли вы математику, как любим её мы?</h1>
-				<p>Нашим дизайнерам мы удаляем нейроны, ответственные за креатив, чтобы дать им возможность всё просчитать</p>
+				<div class="text-wrapper">
+					<h1>Любите ли вы математику, как любим её мы?</h1>
+					<p>Нашим дизайнерам мы удаляем нейроны, ответственные за креатив, чтобы дать им возможность всё просчитать</p>
+				</div>
 				<img src="./img/calc.png" />
 			</div>
 			<div class="slide-3">
-				<h1>Только наркотики, Только хардкор!</h1>
-				<p>Все дизайнерские решения в нашей компании принимаются только под воздействием качественных галлюценогенов</p>
+				<div class="text-wrapper">
+					<h1>Только наркотики, Только хардкор!</h1>
+					<p>Все дизайнерские решения в нашей компании принимаются только под воздействием качественных галлюценогенов</p>
+				</div>
 				<img src="./img/drugs.png" />
 			</div>
-		</div>	
-	</section>
+		</section>	
+	
 
 
 	<section class="offer centered">
