@@ -15,19 +15,25 @@ body {
 	flex-direction: column;
 	padding-top: 26px;
 }
+
 .centered {
 	margin: 0 auto;
 	width: 882px;
 }
+
+ /* header */
+
 header {
 	display: flex;
 	align-items: center;
-	padding-bottom: 40px;
+	padding-bottom: 42px;
 	background-color: #456789;	/* temp */
 }
+
 .logo {
 	flex: 1 0 16.51%;
 }
+
 .main-nav {
 	flex: 1 0 63.49%;
 	display: flex;
@@ -35,6 +41,7 @@ header {
 	background-color: #987654;	/* temp */
 
 }
+
 .main-nav a {
 	padding-left: 46px;
 }
@@ -42,22 +49,39 @@ header {
 .main-nav a:nth-child(5) {
 	padding-left: 96px;
 }
+
 .icon-cart {
 	padding-right: 12px;
 }
+
 /*slider*/
+
 .slider {
 	position: relative;
-	height: 310px;
+	height: 309px;
+	background-color: #7e8f90;
 }
+
+[class^="slide-"] {
+	display: none;
+}
+
+[id="slide-1"]:checked ~ .slide-1,
+[id="slide-2"]:checked ~ .slide-2,
+[id="slide-3"]:checked ~ .slide-3 {   
+	display: block; 
+}
+
 .slider img {
 	position: absolute;
-	top: 0;
 	right: 0;
+	top: 0;
 }
+/*===== drugs.png fix =====*/
 .slide-3 img {
 	top: -10px;
 }
+/*=========================*/
 .text-wrapper {
 	position: absolute;
 	width: 466px;
@@ -65,23 +89,125 @@ header {
 	left: 0;
 }
 
-.switch {
-	position: absolute;
-	top: 206px;
-	right: 406px;
-}
-
 .learn-more {
 	position: absolute;
 	top: 158px;
-	right: 0px;
+	left: 0px;
 } 
+
+#slide-1,  label[for="slide-1"] {
+	position: absolute;
+	top: 206px;
+	left: 406px;
+
+}
+#slide-2,  label[for="slide-2"] {
+	position: absolute;
+	
+	top: 206px;
+	left: 426px;
+}
+#slide-3,  label[for="slide-3"] {
+	position: absolute;
+	
+	top: 206px;
+	left: 446px;
+}
+
+
+
+
+
+.offer {
+	display: flex;
+	padding: 80px 0 80px 0;
+	height: 345px;
+	justify-content: space-between;
+	background-color: yellow;
+	border-bottom: 2px solid #eeeeee;
+}
+.offer > div {
+	width: 242px;
+	height: 300px;
+}
+
+.about-us {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	padding: 60px 0 60px 0;
+	background-color: #f9c5c7;
+	border-bottom: 2px solid #eeeeee;
+}
+.praud {
+	width: 575px;
+	height: 128px;
+
+}
+.offer-list {
+	width: 430px;
+	height: 150px;
+}
+.since {
+	width: 240px;
+	height: 120px;
+}
+.hard {
+	width: 228px;
+	height: 150px;
+}
+
+
+.partners {
+	display: flex;
+	box-sizing: border-box;
+	justify-content: space-between;
+	align-items: center;
+	padding: 45px 20px 35px 12px; 
+	background-color: #abcca9;
+	border-bottom: 2px solid #eeeeee;
+
+}
+
+.map {
+	padding-top: 85px;
+	height: 416px;
+	background-color: #124538;
+}
+
+
+
+
+
+
 footer {
 	padding: 80px 0;
 }
 
+/*Типографика*/
+
+.about-us span, .about-us p {
+	font-family: 'Roboto', sans-serif;
+}
+
+
+
 /* Оформление */
 
 body {
-	background: linear-gradient( to bottom, #eeeeee 435px, #ffffff 435px);
+	background: linear-gradient( to bottom, #eeeeee 437px, #ffffff 437px);
 }
+.slide-1 img {
+	width: 338px;
+	height: 231px;
+}
+.slide-2 img {
+	width: 230px;
+	height: 249px;
+}
+.slide-3 img {
+	width: 333px;
+	height: 319px;
+}
+
+
