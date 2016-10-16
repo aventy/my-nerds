@@ -9,15 +9,25 @@
 
 
 /* Позиционирование */
+*, *:before, *:after {
+	box-sizing: border-box;
+}
 
 body {
 	display: flex;
 	flex-direction: column;
 	align-items: center; 
+
+	
+}
+.gray-bg1, .gray-bg2 {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 	padding-top: 26px;
 }
 
-header, .slider, .offer, .about-us, .partners, .map, footer {
+header, .slider, .offer, .about-us, .partners, footer {
 	width: 882px;
 }
 
@@ -54,80 +64,126 @@ header {
 	padding-right: 12px;
 }
 
+.greeting {
+	padding-top: 32px;
+}
+
 /*slider*/
-
 .slider {
-	position: relative;
+  position: relative;
 	height: 309px;
-	background-color: #7e8f90;
+	background-color: #7e8f90;  /* temp */
 }
-
-[class^="slide-"] {
-	display: none;
-}
-
-[id="slide-1"]:checked ~ .slide-1,
-[id="slide-2"]:checked ~ .slide-2,
-[id="slide-3"]:checked ~ .slide-3 {   
-	display: block; 
-}
-
-.slider img {
+.slider input[type=radio] {
 	position: absolute;
-	right: 0;
-	top: 0;
+	opacity: 0;
 }
-/*===== drugs.png fix =====*/
-.slide-3 img {
-	top: -10px;
+
+.switch {
+	position: absolute;            
+	display: flex;
+	bottom: 94px;                  
+	left: 406px;                  
+  width: 48px;                 
+  height: 10px;        
 }
-/*=========================*/
+
+.switch label {
+  width: 4px;
+  height: 4px;
+  margin: 0 3px;
+  background: #ffffff;
+  border: 3px solid #ffffff;
+  border-radius: 50%;
+  cursor: pointer;
+  box-sizing: content-box;
+}
+
+#slide-1:checked ~ .switch label[for="slide-1"],
+#slide-2:checked ~ .switch label[for="slide-2"],
+#slide-3:checked ~ .switch label[for="slide-3"] { 
+  background: #c1c1c1;
+}
+
+.slide{
+  min-height: 100%;
+  overflow: hidden;
+  display:none;
+}
+.slides {
+  height: 100%;
+  width: 100%;
+}
+
+#slide-1:checked ~ .slides .slide:nth-child(1) { 
+  display: block;
+}
+
+#slide-2:checked ~ .slides .slide:nth-child(2) { 
+  display: block;
+}
+
+#slide-3:checked ~ .slides .slide:nth-child(3) { 
+  display: block;
+}
+
 .text-wrapper {
-	position: absolute;
-	width: 466px;
-	top: 35px;
-	left: 0;
+  width: 465px;
+  padding: 30px 0;
+  color: #283136;
 }
 
 .learn-more {
-	position: absolute;
-	top: 158px;
-	left: 0px;
-} 
-
-#slide-1,  label[for="slide-1"] {
-	position: absolute;
-	top: 206px;
-	left: 406px;
-
+  display: block;
+  width: 240px;
+  height: 38px;
+  border-radius: 3px;
+  background-color: #435890;        /* temp */
 }
-#slide-2,  label[for="slide-2"] {
-	position: absolute;
-	
-	top: 206px;
-	left: 426px;
+
+.slide:nth-child(1) {
+  background: url("../img/cross-devices.png") no-repeat 100% 10px;
 }
-#slide-3,  label[for="slide-3"] {
-	position: absolute;
-	
-	top: 206px;
-	left: 446px;
+
+.slide:nth-child(2) {
+  background: url("../img/calc.png") no-repeat 100% 10px;
+}
+
+.slide:nth-child(3) {
+  background: url("../img/drugs.png") no-repeat 100% -9px;
 }
 
 
+.range {
+	background-color: #234555; /* temp */
+	width: 200px;
+	height: 3px;
+}
 
+.thumb {
+	width: 15px;
+	height: 15px;
+	background-color: #cccccc;      /* temp */
+	border-radius: 8px;
+}
+.dot {
+	width: 9px;
+	height: 9px;
+	background-color: #000;         /* temp */
+	border-radius: 6px;
+}
 
 
 .offer {
 	display: flex;
 	padding: 80px 0 80px 0;
-	height: 345px;
+	min-height: 345px;
 	justify-content: space-between;
-	background-color: yellow;
+	background-color: yellow;             /* temp */
 	border-bottom: 2px solid #eeeeee;
 }
 .offer > div {
-	width: 242px;
+	width: 240px;
 	height: 300px;
 }
 
@@ -136,7 +192,7 @@ header {
 	flex-wrap: wrap;
 	justify-content: space-between;
 	padding: 60px 0 60px 0;
-	background-color: #f9c5c7;
+	background-color: #f9c5c7;            /* temp */
 	border-bottom: 2px solid #eeeeee;
 }
 .praud {
@@ -164,18 +220,22 @@ header {
 	justify-content: space-between;
 	align-items: center;
 	padding: 45px 20px 35px 12px; 
-	background-color: #abcca9;
+	background-color: #abcca9;              /* temp */
 	border-bottom: 2px solid #eeeeee;
 
 }
 
 .map {
+	width: 1199px;
 	padding-top: 85px;
 	height: 416px;
-	background-color: #124538;
+	background-color: #124538;             /* temp */
 }
 
-
+.map img {
+	width: 1199px;
+	height: 416px;
+}
 
 
 
@@ -184,6 +244,7 @@ footer {
 	padding: 80px 0;
 	display: flex;
 	justify-content: space-between;
+	background-color: #cc0334;            /* temp */
 
 }
 .social {
@@ -215,8 +276,15 @@ footer {
 
 /* Оформление */
 
-body {
-	background: linear-gradient( to bottom, #eeeeee 437px, #ffffff 437px);
+.gray-bg1 {
+	width: 100%;
+	height: 437px;
+	background-color: #eeeeee;
+}
+.gray-bg2 {
+	width: 100%;
+	height: 328px;
+	background-color: #eeeeee;
 }
 .slide-1 img {
 	width: 338px;
