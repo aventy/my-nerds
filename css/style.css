@@ -27,7 +27,7 @@ body {
 	padding-top: 26px;
 }
 
-header, .slider, .offer, .about-us, .partners, .map, footer {
+header, .slider, .offer, .about-us, .partners, footer {
 	width: 882px;
 }
 
@@ -138,7 +138,7 @@ header {
   width: 240px;
   height: 38px;
   border-radius: 3px;
-  background-color: #435890;
+  background-color: #435890;        /* temp */
 }
 
 .slide:nth-child(1) {
@@ -155,7 +155,7 @@ header {
 
 
 .range {
-	background-color: #234555;
+	background-color: #234555; /* temp */
 	width: 200px;
 	height: 3px;
 }
@@ -163,13 +163,13 @@ header {
 .thumb {
 	width: 15px;
 	height: 15px;
-	background-color: #cccccc;
+	background-color: #cccccc;      /* temp */
 	border-radius: 8px;
 }
 .dot {
 	width: 9px;
 	height: 9px;
-	background-color: #000;
+	background-color: #000;         /* temp */
 	border-radius: 6px;
 }
 
@@ -179,11 +179,11 @@ header {
 	padding: 80px 0 80px 0;
 	min-height: 345px;
 	justify-content: space-between;
-	background-color: yellow;
+	background-color: yellow;             /* temp */
 	border-bottom: 2px solid #eeeeee;
 }
 .offer > div {
-	width: 242px;
+	width: 240px;
 	height: 300px;
 }
 
@@ -192,7 +192,7 @@ header {
 	flex-wrap: wrap;
 	justify-content: space-between;
 	padding: 60px 0 60px 0;
-	background-color: #f9c5c7;
+	background-color: #f9c5c7;            /* temp */
 	border-bottom: 2px solid #eeeeee;
 }
 .praud {
@@ -220,18 +220,22 @@ header {
 	justify-content: space-between;
 	align-items: center;
 	padding: 45px 20px 35px 12px; 
-	background-color: #abcca9;
+	background-color: #abcca9;              /* temp */
 	border-bottom: 2px solid #eeeeee;
 
 }
 
 .map {
+	width: 1199px;
 	padding-top: 85px;
 	height: 416px;
-	background-color: #124538;
+	background-color: #124538;             /* temp */
 }
 
-
+.map img {
+	width: 1199px;
+	height: 416px;
+}
 
 
 
@@ -240,6 +244,7 @@ footer {
 	padding: 80px 0;
 	display: flex;
 	justify-content: space-between;
+	background-color: #cc0334;            /* temp */
 
 }
 .social {
