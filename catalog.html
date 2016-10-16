@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Nёrds! - Магазин</title>
+	<link rel="stylesheet" href="./css/normalize.css">
+	<link rel="stylesheet" href="./css/style.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,500&subset=cyrillic">
+
+</head>
+<body>
+	<div class="gray-bg2">
+		<header>
+			<a class="logo" href="./index.html"><img src="./img/logo.png" /></a>
+			<nav class="main-nav">
+				<a href="#">студия</a>
+				<a href="#">клиенты</a>
+				<a href="./store.html">магазин</a>
+				<a href="#">контакты</a>
+				<a href="#"><img class="icon-cart" src="./img/icon-cart.png">корзина</a>
+			</nav>
+		</header>
+
+
+		<section class="greeting">добро пожаловать в магазин готовых макетов</section>
+	</div>
+
+
+	<aside class="filter">
+			<form action="post">
+				<div class="price">
+					<h2>стоимость:</h2>
+					<div class="range"></div>	
+					<div class="selected"></div>	
+					<div class="thumb"></div>
+					<div class="dot"></div>
+					<div class="thumb"></div>	
+					<div class="dot"></div>	
+
+
+					<label>от</label><input type="number" name="price" min="0" value="0" pattern="[0-9]*"> 
+					<label>до</label><input type="number" name="price" max="15000" value="15000" pattern="[0-9]*">
+				</div>
+
+				<div class="grid">
+					<h2>сетка:</h2>
+					<input name="grid" id="adapt" type="radio" value="adapt" checked><label for="adapt">адаптивная</label>
+					<input name="grid" id="fix" type="radio" value="fix"><label for="fix">фиксированная</label>
+					<input name="grid" id="elastic" type="radio" value="elastic"> <label for="elastic">резиновая</label>
+				</div>
+
+				<div class="features">
+					<h2>особенности:</h2>
+					<input type="checkbox" id="slider" name="features" value="slider" checked><label for="slider">слайдер</label>
+					<input type="checkbox" id="block" name="features" value="block"><label for="block">блок преимуществ</label>
+					<input type="checkbox" id="news" name="features" value="news" checked><label for="news">новости</label>
+					<input type="checkbox" id="gallery" name="features" value="gallery"><label for="gallery">галерея</label>
+					<input type="checkbox" id="cart" name="features" value="cart"><label for="cart">корзина</label>
+				</div>	
+
+				<input type="submit" value="показать" class="btn">
+			</form>
+	</aside>
+
+
+
+
+
+
+	<section class="map">
+		<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3997.198206545723!2d30.3230833!3d59.9387942!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1474650128795" width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen></iframe>
+		<div class="address">
+			<h3>nёrds design studio</h3>
+			<p>191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8 </br>тел. +7 (812) 275-75-75</p>
+			<a class="btn" href="#" >напишите нам</a>
+		</div>
+		<img class="map-pointer" src="./img/pointer-bubble.png"/>
+		<div class="write-us">
+			<a class="close-form" href="#" >X</a>
+			<form action="post">
+				<label>Ваше имя:</label>
+				<input type="text" name="username">
+				<label>Ваш e-mail:</label>
+				<input type="email" name="email">
+				<label>Текст письма:</label>
+				<textarea></textarea>
+				<input type="submit" value="отправить" class="btn">
+			</form>
+		</div>
+	</section>
+
+
+	
+
+
+	<main>
+		<div class="sort">
+			<div class="sort-type">
+				label input radio input radio input radio
+			</div>
+			<div >input radio upper   |||   input radio lower  </div>
+			
+		</div>
+		<div class="result"></div>
+	</main>
+
+
+	<section class="pagination"></section>
+
+
+	<footer class="footer">
+		<div class="social">
+			<div class="icon"><img src="./img/icon-vk.png" alt="vk" /></div>
+			<div class="icon"> <img src="./img/icon-facebook.png" alt="fb" /></div>
+			<div class="icon"><img src="./img/icon-instagram.png" alt="inst" /></div>
+		</div>
+		<div class="referal">
+			<h2>Давайте дружить, это выгодно!</h2>
+			<p>Скидка 10% для друзей из социальных сетей.</p>
+		</div>
+	</footer>
+
+
+
+
+</body>
+</html>
