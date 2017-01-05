@@ -196,7 +196,7 @@ header {
   height: 120px;
 }
 .hard {
-  width: 228px;
+  width: 250px;
   height: 150px;
 }
 
@@ -207,9 +207,7 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 45px 20px 35px 12px; 
-  background-color: #abcca9;              /* temp */
   border-bottom: 2px solid #eeeeee;
-
 }
 
 .map {
@@ -438,8 +436,36 @@ a.current-section:not(:last-child) {
   margin-top: 45px;
 
 }
+.partners a {
+  display: block;
+}
 
+.partners a:first-child {
+  background-image: url('../img/glukhanko.png');
+  width: 198px;
+  height: 37px;
+}
+.partners a:hover:first-child {
+  background-image: url('../img/glukhanko-hover.png');
 
+}
+.partners a:nth-child(2) {
+  background-image: url('../img/html-academy.png');
+  width: 199px;
+  height: 68px;
+}
+.partners a:hover:nth-child(2) {
+  background-image: url('../img/html-academy-hover.png');
+}
+
+.partners a:nth-child(3) {
+  background-image: url('../img/barbershop.png');
+  width: 209px;
+  height: 86px;
+}
+.partners a:hover:nth-child(3) {
+  background-image: url('../img/barbershop-hover.png');
+}
 
 
 
