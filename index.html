@@ -114,31 +114,30 @@
 		<a href="#"></a>
 	</section>
 
-
-	<section class="map">
-		<img src="./img/map.png" width="1199px" height="auto" />
-		<div class="address">
-			<h3>nёrds design studio</h3>
-			<p>191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8 </br>тел. +7 (812) 275-75-75</p>
-			<a class="btn" href="#" >напишите нам</a>
-		</div>
-		
-		<div class="write-us">
-			<a class="close-form" href="#" >X</a>
-			<form action="post">
-				<label>Ваше имя:</label>
-				<input type="text" name="username">
-				<label>Ваш e-mail:</label>
-				<input type="email" name="email">
-				<label>Текст письма:</label>
-				<textarea></textarea>
-				<input type="submit" value="ОТПРАВИТЬ" class="btn">
-			</form>
-		</div>
+	<section id="map">
 	</section>
 
 
 	<footer class="footer">
+		<div class="address">
+			<h3>nёrds design studio</h3>
+			<p>191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8 <br><br>тел. +7 (812) 275-75-75</p>
+			<button class="btn btn-20" href="#" >напишите нам</button>
+		</div>
+		<div hidden class="write-us">
+			<a class="close-form" href="#" ></a>
+			<form action="post">
+				<div class="wrap">
+					<label for="username">Ваше имя:</label>
+					<label for="email">Ваш e-mail:</label>
+					<input type="text" name="username" class="username" placeholder="ПРЕДСТАВЬТЕСЬ, ПОЖАЛУЙСТА">
+					<input type="email" name="email" class="email" placeholder="ДЛЯ ОТПРАВКИ ОТВЕТА">
+				</div>
+				<label for="message">Текст письма:</label>
+				<textarea class="message" placeholder="В СВОБОДНОЙ ФОРМЕ"></textarea>
+				<input type="submit" value="ОТПРАВИТЬ" class="send btn btn-460">
+			</form>
+		</div>
 		<div class="social">
 			<div class="icon"><img src="./img/icon-vk.png" alt="vk" /></div>
 			<div class="icon"> <img src="./img/icon-facebook.png" alt="fb" /></div>
@@ -149,6 +148,28 @@
 			<p>Скидка 10% для друзей из социальных сетей.</p>
 		</div>
 	</footer>
+<script>
+function initMap() {
+  var map = new google.maps.Map(document.getElementById('map'), {
+    zoom: 17,
+    center: {lat: 59.938801,  lng:  30.319896 }
+  });
 
+  var image = {
+    url: './img/map-marker.png',
+      size: new google.maps.Size(231, 190),
+    // The origin for this image is (0, 0).
+    origin: new google.maps.Point(0, 0),
+    // The anchor for this image is the base of the flagpole at (0, 32).
+    anchor: new google.maps.Point(120, 180)
+  };
+  var beachMarker = new google.maps.Marker({
+    position: {lat: 59.938604,  lng: 30.323570,},
+    map: map,
+    icon: image
+  });
+}
+</script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCvKK3Fv3fN47-1LTkb4xcnR__hLyNJgZw&callback=initMap"></script>
 </body>
 </html>
