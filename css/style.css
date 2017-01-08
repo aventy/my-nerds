@@ -115,7 +115,7 @@ header {
 .sort {
   width: 562px;
   height: 20px;
-  margin-bottom: 20px;
+  margin-bottom: 22px;
   position: relative;
 }
 .sort-type {
@@ -783,22 +783,36 @@ a.current-section:not(:last-child) {
   font-size: 12px;
   text-transform: uppercase;
   font-weight: 700;
+  margin-right: 40px;
 }
-.sort fieldset {
-  margin: 0;
-  padding: 0;
-  border: 0;
-}
-.sort-view {
+
+.sort input[type='radio'] {
   display: none;
   position: relative;
+}
+#by-price + label, #by-type + label, #by-func + label {
+  color: #c7c7c7;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-right: 45px;
+  border-bottom: 1px dotted #00ca74;
+} 
+#by-price + label:hover, #by-type + label:hover, #by-func + label:hover{
+  color: #000;
+  border-bottom: 1px solid #00ca74;
+}
+
+#by-price:checked + label, #by-type:checked + label, #by-func:checked + label,#by-price:active + label, #by-type:active + label, #by-func:active + label  {
+  color: #000;
+  border: none;
 }
 
 #to-low + label {
   content: '';
   position: absolute;
-  top: 10px;
-  right: 10px;
+  top: 5px;
+  right: 20px;
   border-top: 11px solid #c1c1c1;
   border-left: 7px solid transparent;
   border-right: 7px solid transparent; 
@@ -807,8 +821,8 @@ a.current-section:not(:last-child) {
 #to-high + label {
   content: '';
   position: absolute;
-  top: 20px;
-  right: 20px;
+  top: 5px;
+  right: 3px;
   border-bottom: 11px solid #c1c1c1;
   border-left: 7px solid transparent;
   border-right: 7px solid transparent; 
@@ -819,10 +833,10 @@ a.current-section:not(:last-child) {
 #to-high + label:active {
   border-bottom: 11px solid #000;
 }
-#to-low[checked] + label {
+#to-low:checked + label {
   border-top: 11px solid #00ca74;
 }
-#to-high[checked] + label {
+#to-high:checked + label {
   border-bottom: 11px solid #00ca74;
 }
 
@@ -852,4 +866,9 @@ a.current-section:not(:last-child) {
   color: #000;
   padding: 0;
   padding-top: 13px;
+}
+ 
+.filter input[type='submit'] {
+  width: 155px;
+  padding: 0;
 }
