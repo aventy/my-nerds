@@ -62,10 +62,19 @@
 
 		<section class="search-result">
 			<div class="sort">
-				<div class="sort-type">
-					label input radio input radio input radio
+				<form class="sort-type">
+					<legend>сортировать:</legend> 
+						<fieldset>
+						<input type="radio" name="" id="by-price"><label>по цене:</label>
+						<input type="radio" name="" id="by-type"><label>по типу:</label>
+						<input type="radio" name="" id="by-func"><label>по функционалу:</label>
+						</fieldset>
+						<fieldset>
+							<input type="radio" name="view" checked="checked" class="sort-view " id="to-low"><label for="to-low"></label>
+							<input type="radio" name="view"  class="sort-view" id="to-high"><label for="to-high"></label>
+						</fieldset>
 				</div>
-				<div >input radio upper   |||   input radio lower  </div>
+				
 				
 			</div>
 			<section class="result">
@@ -134,7 +143,7 @@
 				<a href="#" class="page current-page">1</a>
 				<a href="#" class="page">2</a>
 				<a href="#" class="page">3</a>
-				<a href="#" class="page next-page btn-14">следующая</a>
+				<a href="#" class="page  btn next-page btn-14">следующая</a>
 			</section>
 		</section>
 
