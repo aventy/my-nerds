@@ -6,7 +6,7 @@
 	<link rel="stylesheet" href="./css/normalize.css">
 	<link rel="stylesheet" href="./css/style.css">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,500&subset=cyrillic">
-
+	
 </head>
 <body>
 	<div class="gray-bg2">
@@ -26,35 +26,48 @@
 	<main >
 		<aside class="filter">
 				<form action="post">
-					<div class="price">
-						<h2>стоимость:</h2>
-						<div class="range"></div>	
-						<div class="selected"></div>	
-						<div class="thumb"></div>
-						<div class="dot"></div>
-						<div class="thumb"></div>	
-						<div class="dot"></div>	
+					<fieldset class="price">
+					<legend>стоимость:</legend>
+						
+						<div class="double-range">
+							<div class="range"></div>	
+							<div class="selected"></div>	
+							<div class="thumb t1"></div>
+							<div class="dot d1"></div>
+							<div class="thumb t2"></div>	
+							<div class="dot d2"></div>	
+						</div>
 
+						<label for="price-min">от</label>
+						<input type="number" id="price-min" name="price-min" min="0" max="14999" value="0" pattern="[0-9]*"> 
+						<label for="price-max">до</label>
+						<input type="number" id="price-max" name="price-max" min="1" max="15000" value="15000" pattern="[0-9]*">
+					</fieldset>
 
-						<label>от</label><input type="number" name="price" min="0" max="14999" value="0" pattern="[0-9]*"> 
-						<label>до</label><input type="number" name="price" min="1" max="15000" value="15000" pattern="[0-9]*">
-					</div>
-
-					<div class="grid">
-						<h2>сетка:</h2>
-						<input name="grid" id="adapt" type="radio" value="adapt" checked><label for="adapt">адаптивная</label>
-						<input name="grid" id="fix" type="radio" value="fix"><label for="fix">фиксированная</label>
-						<input name="grid" id="elastic" type="radio" value="elastic"> <label for="elastic">резиновая</label>
-					</div>
-
-					<div class="features">
-						<h2>особенности:</h2>
-						<input type="checkbox" id="slider" name="features" value="slider" checked><label for="slider">слайдер</label>
-						<input type="checkbox" id="block" name="features" value="block"><label for="block">блок преимуществ</label>
-						<input type="checkbox" id="news" name="features" value="news" checked><label for="news">новости</label>
-						<input type="checkbox" id="gallery" name="features" value="gallery"><label for="gallery">галерея</label>
-						<input type="checkbox" id="cart" name="features" value="cart"><label for="cart">корзина</label>
-					</div>	
+					<fieldset class="grid">
+					<legend>сетка:</legend>
+						
+						<input name="grid" id="adapt" type="radio" value="adapt" checked>
+						<label for="adapt">адаптивная</label>
+						<input name="grid" id="fix" type="radio" value="fix">
+						<label for="fix">фиксированная</label>
+						<input name="grid" id="elastic" type="radio" value="elastic">
+						<label for="elastic">резиновая</label>
+					</fieldset>
+					
+					<fieldset class="features">
+					<legend>особенности:</legend>
+						<input type="checkbox" id="slider" name="features" value="slider" checked>
+						<label for="slider">слайдер</label>
+						<input type="checkbox" id="block" name="features" value="block">
+						<label for="block">блок преимуществ</label>
+						<input type="checkbox" id="news" name="features" value="news" checked>
+						<label for="news">новости</label>
+						<input type="checkbox" id="gallery" name="features" value="gallery">
+						<label for="gallery">галерея</label>
+						<input type="checkbox" id="cart" name="features" value="cart">
+						<label for="cart">корзина</label>
+					</fieldset>	
 
 					<input type="submit" value="показать" class="btn ">
 				</form>
@@ -67,7 +80,7 @@
 						<input type="radio" name="type" id="by-price"><label for="by-price">по цене:</label>
 						<input type="radio" name="type" id="by-type"><label for="by-type">по типу:</label>
 						<input type="radio" name="type" id="by-func"><label for="by-func">по функционалу:</label>
-						<input type="radio" name="view"  class="sort-view " id="to-low">
+						<input type="radio" name="view" checked="checked" class="sort-view " id="to-low">
 						<label for="to-low"></label>
 						<input type="radio" name="view"  class="sort-view" id="to-high">
 						<label for="to-high"></label>
